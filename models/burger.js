@@ -16,6 +16,7 @@ const burger = {
             cb(res);
         });
     }
+    // TODO: deleteOne()
 }
 
 module.exports = burger

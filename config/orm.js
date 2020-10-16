@@ -36,6 +36,7 @@ const orm = {
             cb(res);
         });
     }
+    // deleteOne() TODO:
 }
 
 // Export the orm object so our models can use it!
