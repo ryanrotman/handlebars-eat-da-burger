@@ -1,0 +1,11 @@
+<div class="card-content white-text">
+    <p>{{burger_name}}</p>
+</div>
+<div class="card-action">
+    <button class="devour-burger btn waves-effect waves-light" data-id="{{id}}" data-devoured="{{devoured}}">
+        {{#if devoured}}make it again!<i class="fas fa-hamburger"></i>{{else}}devour it!<i class="fas fa-utensils"></i>{{/if}}
+    </button>
+    <button class="delete-burger btn waves-effect waves-light" data-id="{{this.id}}">
+        <i class="fas fa-trash-alt"></i>
+    </button>
+</div>

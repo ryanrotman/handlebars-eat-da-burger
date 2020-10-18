@@ -19,29 +19,37 @@
 <div class="container center-align">
     <div class="row">
         <!-- Burgers to Eat Section -->
-        <div class="col s12 m6" id="eat">
-            <div class="card blue-grey darken-1">
-                <div class="card-content white-text">
-                    <p>1. Double Cheeseburger</p>
-                </div>
-                <div class="card-action">
-                    <button class="btn waves-effect waves-light" type="submit" name="action">devour it!
-                        <i class="fas fa-utensils"></i>
-                    </button>
-                </div>
+        <div class="col s12 m6">
+            <div class="card-panel blue-grey darken-1">
+                <span class="white-text">Burgers to Eat!</span>
             </div>
         </div>
         <!-- Burgers Devoured Section -->
+        <div class="col s12 m6">
+            <div class="card-panel blue-grey darken-1">
+                <span class="white-text">Burgers Devoured!</span>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <!-- Burgers to Eat Section Cards -->
+        <div class="col s12 m6" id="eat">
+            <div class="card blue-grey darken-1">
+                {{#each burger}}
+                    {{#unless devoured}}
+                        {{> burger/burger-block devoured=false}}
+                    {{/unless}}
+                {{/each}}
+            </div>
+        </div>
+        <!-- Burgers Devoured Section Cards -->
         <div class="col s12 m6" id="devoured">
             <div class="card blue-grey darken-1">
-                <div class="card-content white-text">
-                    <p>3. BBQ Bacon Cheeseburger</p>
-                </div>
-                <div class="card-action">
-                    <button class="btn waves-effect waves-light" type="submit" name="action">remove
-                        <i class="fas fa-hamburger"></i>
-                    </button>
-                </div>
+                {{#each burger}}
+                    {{#unless devoured}}
+                        {{> burger/burger-block devoured=true}}
+                    {{/unless}}
+                {{/each}}
             </div>
         </div>
     </div>
@@ -56,7 +64,7 @@
             </div>
         </form>
     </div>
-    <!-- Submit Button -->
+    <!-- Burger Submit Button -->
     <button class="btn waves-effect waves-light" type="submit" name="action">Submit
         <i class="fas fa-hamburger"></i>
     </button>
