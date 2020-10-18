@@ -35,8 +35,17 @@ const orm = {
             }
             cb(res);
         });
+    },
+    deleteOne: (table, condition, cb) => {
+        const queryString = "DELETE FROM ?? WHERE ??;";
+        console.log(queryString);
+        const query = connection.query(queryString, [table, condition], (err, res) => {
+            if (err) {
+                throw err;
+            }
+            cb(res);
+        })
     }
-    // deleteOne() TODO:
 }
 
 // Export the orm object so our models can use it!
