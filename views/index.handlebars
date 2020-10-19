@@ -34,23 +34,19 @@
     <div class="row">
         <!-- Burgers to Eat Section Cards -->
         <div class="col s12 m6" id="eat">
-            <div class="burger-make card blue-grey darken-1">
-                {{#each burgers}}
-                    {{#unless devoured}}
-                        {{> burger/burger-block devoured=0}}
-                    {{/unless}}
-                {{/each}}
-            </div>
+            {{#each burgers}}
+                {{#unless devoured}}
+                    {{> burger/burger-block devoured=0}}
+                {{/unless}}
+            {{/each}}
         </div>
         <!-- Burgers Devoured Section Cards -->
         <div class="col s12 m6" id="devoured">
-            <div class="burger-devoured card blue-grey darken-1">
-                {{#each burgers}}
-                    {{#if devoured}}
-                        {{> burger/burger-block devoured=1}}
-                    {{/if}}
-                {{/each}}
-            </div>
+            {{#each burgers}}
+                {{#if devoured}}
+                    {{> burger/burger-block devoured=1}}
+                {{/if}}
+            {{/each}}
         </div>
     </div>
     <div class="row">
