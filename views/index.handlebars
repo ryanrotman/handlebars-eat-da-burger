@@ -10,7 +10,7 @@
 
 <!-- Burger Image -->
 <div class="container center-align">
-    <img class="responsive-img" src="../public/assets/img/Burger_1.JPG" width="250px" height="250px" alt="Burger on grill">
+    <img class="circle responsive-img" src="../public/assets/img/Burger_1.JPG" width="250px" height="250px" alt="Burger on grill">
 </div>
 
 <br>
@@ -21,7 +21,7 @@
         <!-- Burgers to Eat Section -->
         <div class="col s12 m6">
             <div class="card-panel blue-grey darken-1">
-                <span class="white-text">Burgers to Eat!</span>
+                <span class="white-text">Burgers to Make!</span>
             </div>
         </div>
         <!-- Burgers Devoured Section -->
@@ -37,7 +37,7 @@
             <div class="card blue-grey darken-1">
                 {{#each burger}}
                     {{#unless devoured}}
-                        {{> burger/burger-block devoured=false}}
+                        {{> burger/burger-block devoured=0}}
                     {{/unless}}
                 {{/each}}
             </div>
@@ -46,9 +46,9 @@
         <div class="col s12 m6" id="devoured">
             <div class="card blue-grey darken-1">
                 {{#each burger}}
-                    {{#unless devoured}}
-                        {{> burger/burger-block devoured=true}}
-                    {{/unless}}
+                    {{#if devoured}}
+                        {{> burger/burger-block devoured=1}}
+                    {{/if}}
                 {{/each}}
             </div>
         </div>
@@ -58,25 +58,25 @@
         <form class="create-form col s12 l6 offset-l3">
             <div class="row">
                 <div class="input-field col s12">
-                    <textarea id="newBurger" class="materialize-textarea"></textarea>
+                    <input id="newBurger" type="text">
                     <label for="newBurger">Enter burger name here</label>
                 </div>
             </div>
             <!-- Make/Devour Radio Buttons -->
                   <p>
                     <label>
-                      <input class="with-gap" name="devoured" type="radio" value="1" checked />
+                      <input class="with-gap" name="devoured" type="radio" value="0" checked />
                       <span>Make!</span>
                     </label>
                     <!-- Creat space between the radio buttons -->
                     &nbsp;&nbsp;&nbsp;&nbsp;
                     <label>
-                      <input class="with-gap" name="devoured" type="radio" value="0" />
+                      <input class="with-gap" name="devoured" type="radio" value="1" />
                       <span>Devour!</span>
                     </label>
                   </p>
             <!-- Burger Submit Button -->
-            <button class="btn-large waves-effect waves-light" type="submit" name="action">Submit
+            <button class="btn-large waves-effect waves-light" id="newBurgerBtn" type="button" name="new-burger">Submit
                 <i class="fas fa-hamburger"></i>
             </button>
         </form>
