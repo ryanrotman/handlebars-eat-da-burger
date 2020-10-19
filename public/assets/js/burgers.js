@@ -1,9 +1,9 @@
 $(function() {
     // Create new burger
-    $(".create-form").on("submit", function(event) {
+    $("#newBurgerBtn").on("click", function(event) {
         event.preventDefault();
         const newBurger = {
-            burger_name: $("#newBuger").val().trim(),
+            burger_name: $("#newBurger").val().trim(),
             devoured: $("[name=devoured]:checked").val().trim()
         };
         // Send the POST request
