@@ -58,10 +58,23 @@
         <form class="create-form col s12 l6 offset-l3">
             <div class="row">
                 <div class="input-field col s12">
-                    <textarea id="textarea1" class="materialize-textarea"></textarea>
-                    <label for="textarea1">Enter burger name here</label>
+                    <textarea id="newBurger" class="materialize-textarea"></textarea>
+                    <label for="newBurger">Enter burger name here</label>
                 </div>
             </div>
+            <!-- Make/Devour Radio Buttons -->
+                  <p>
+                    <label>
+                      <input class="with-gap" name="devoured" type="radio" value="1" checked />
+                      <span>Make!</span>
+                    </label>
+                    <!-- Creat space between the radio buttons -->
+                    &nbsp;&nbsp;&nbsp;&nbsp;
+                    <label>
+                      <input class="with-gap" name="devoured" type="radio" value="0" />
+                      <span>Devour!</span>
+                    </label>
+                  </p>
             <!-- Burger Submit Button -->
             <button class="btn-large waves-effect waves-light" type="submit" name="action">Submit
                 <i class="fas fa-hamburger"></i>
