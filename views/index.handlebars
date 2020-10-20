@@ -21,7 +21,7 @@
         <!-- Burgers to Eat Section -->
         <div class="col s12 m6">
             <div class="card-panel blue-grey darken-1">
-                <span class="white-text">Burgers to Make!</span>
+                <span class="white-text"><h4>Burgers to Make!</h4></span>
                 {{#each burgers}}
                     {{#unless devoured}}
                         {{> burger/burger-block devoured=0}}
@@ -32,7 +32,7 @@
         <!-- Burgers Devoured Section -->
         <div class="col s12 m6">
             <div class="card-panel blue-grey darken-1">
-                <span class="white-text">Burgers Devoured!</span>
+                <span class="white-text"><h4>Burgers Devoured!</h4></span>
                 {{#each burgers}}
                     {{#if devoured}}
                         {{> burger/burger-block devoured=1}}
