@@ -21,9 +21,9 @@ $(document).ready(function() {
     // Update burger make/devoured status
     $(".devour-burger").on("click", function(event) {
         const id = $(this).data("id");
-        const devoured = $(this).data("devoured");
+        let devoured = $(this).data("devoured");
         const newDevouredState = {
-            devoured: devoured
+            devoured: devoured ? 0 : 1
         };
         // Send the PUT request
         $.ajax("/api/burgers/" + id, {
