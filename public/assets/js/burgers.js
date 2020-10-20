@@ -12,7 +12,7 @@ $(document).ready(function() {
             type: "POST",
             data: newBurger
         }).then(function() {
-            console.log(`Created new burger: ${burger_name}`);
+            console.log(`Created new burger: ${newBurger.burger_name}`);
             // Reload the page to get the updated list
             location.reload();
         });
