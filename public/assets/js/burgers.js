@@ -1,11 +1,12 @@
-$(function() {
+$(document).ready(function() {
     // Create new burger
-    $("#newBurgerBtn").on("click", function(event) {
+    $(".create-form").on("submit", function(event) {
         event.preventDefault();
         const newBurger = {
             burger_name: $("#newBurger").val().trim(),
             devoured: $("[name=devoured]:checked").val().trim()
         };
+        console.log("New Burger:", newBurger);
         // Send the POST request
         $.ajax("/api/burgers", {
             type: "POST",
