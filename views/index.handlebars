@@ -20,8 +20,8 @@
     <div class="row">
         <!-- Burgers to Eat Section -->
         <div class="col s12 m6">
-            <div class="card-panel grey darken-1">
-                <span class="white-text"><h4>Burgers to Make!</h4></span>
+            <div class="card-panel">
+                <span class="white-text"><h5>Burgers to Make!</h5></span>
                 {{#each burgers}}
                     {{#unless devoured}}
                         {{> burger/burger-block devoured=0}}
@@ -31,8 +31,8 @@
         </div>
         <!-- Burgers Devoured Section -->
         <div class="col s12 m6">
-            <div class="card-panel grey darken-1">
-                <span class="white-text"><h4>Burgers Devoured!</h4></span>
+            <div class="card-panel">
+                <span class="white-text"><h5>Burgers Devoured!</h5></span>
                 {{#each burgers}}
                     {{#if devoured}}
                         {{> burger/burger-block devoured=1}}
@@ -54,13 +54,13 @@
                   <p>
                     <label>
                       <input class="with-gap" name="devoured" type="radio" value="0" checked />
-                      <span>Make!</span>
+                      <span class="black-text">Make!</span>
                     </label>
                     <!-- Creat space between the radio buttons -->
                     &nbsp;&nbsp;&nbsp;&nbsp;
                     <label>
                       <input class="with-gap" name="devoured" type="radio" value="1" />
-                      <span>Devour!</span>
+                      <span class="black-text">Devour!</span>
                     </label>
                   </p>
             <!-- Burger Submit Button -->
@@ -78,7 +78,7 @@
     <div class="container">
         <div class="row">
         <div class="col s12 l6 offset-l3">
-            <p class="grey-text text-lighten-4 center-align">Check out the GitHub repo for this application <a href="https://github.com/ryanrotman/homework-13-eat-da-burger" target="_blank">here.</a></p>
+            <p class="center-align">Check out the GitHub repo for this application <a href="https://github.com/ryanrotman/homework-13-eat-da-burger" target="_blank">here.</a></p>
         </div>
         </div>
     </div>
