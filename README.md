@@ -20,7 +20,7 @@ This application uses the following Node.js packages:
 This application also takes into consideration separation of concerns within the program. This application uses a ORM (Object Relational Mapper) file to define the SQL queries, a controller file that defines the routes and all the logic that is included in those routes, and a model that manages the data and logic of the application.
 
 ## Instructions
-This project is deployed on Heroku [here]().
+This project is deployed on Heroku [here](https://rr-eat-da-burger.herokuapp.com/).
 
 <!-- To use this project you will need to clone this [repository](https://github.com/ryanrotman/homework-13-eat-da-burger) and then open it in your text editor of choice. You will also need access to a CLI. This projected was created using VSCode and then run in the integrated terminal. Assuming that Node.js is already installed, you will need to run ```npm install``` and then you can run ```node server.js``` to launch the application and proceed through the prompts. -->
 
