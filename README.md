@@ -1,9 +1,9 @@
-# Homework 13: Eat-Da-Burger!
+# Eat-Da-Burger!
 
 ## Description
-This repository holds the homework assignment for Week 13 of the [The Coding Boot Camp](https://techbootcamps.utexas.edu/coding/) through the University of Texas at Austin's Center for Professional Education.
+<!-- This repository holds the homework assignment for Week 13 of the [The Coding Boot Camp](https://techbootcamps.utexas.edu/coding/) through the University of Texas at Austin's Center for Professional Education. -->
 
-The scope of this project is to create a burger logger that incorporates the use of a lot of new technologies. This application adds on to the use of Node and Express by using MySQL for database support and Handlebars to render the UI.
+This application is a burger logger that incorporates the use of a lot of new technologies. This application adds on to the use of Node and Express by using MySQL for database support and Handlebars to render the UI.
 
 This application follows two new styles of coding:
 - MVC: Model-View-Controller
