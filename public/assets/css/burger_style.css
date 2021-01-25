@@ -86,3 +86,9 @@ input[type="radio"]:checked+span:after, [type="radio"].with-gap:checked+span:bef
 footer .footer-copyright .container {
     color: #EBDEC2;
 }
+
+@media only screen and (max-width: 768px) {
+    nav .brand-logo {
+        font-size: 22px;
+    }
+}
